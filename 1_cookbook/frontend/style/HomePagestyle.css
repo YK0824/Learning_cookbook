@@ -1,3 +1,4 @@
+/* === Base Reset === */
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +10,14 @@ body {
   background: #ffffff;
 }
 
+/* === Hero Section === */
 .hero {
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
-  height: 300px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 30px;
+  height: 716px;
+  background: url('../image/hame_head.png') center center / cover no-repeat;
+  overflow: hidden;
 }
 
+/* === Navbar === */
 .navbar {
   background: rgba(255, 255, 255, 0.85);
   padding: 16px 32px;
@@ -28,26 +28,33 @@ body {
   transform: translateX(-50%);
   z-index: 999;
   display: flex;
-  flex-wrap: wrap; /* 可換行 */
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1000px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 加陰影會更穩定視覺 */
+  width: 50vw;
+  max-width: 3000px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.logo {
+/* === Logo === */
+.logo a {
   font-weight: 700;
   font-size: 16px;
+  color: black;
+  text-decoration: none;
 }
 
-.nav-links {
+/* === Navigation Links === */
+.nav-links,
+.nav-links_small {
   display: flex;
   list-style: none;
   gap: 40px;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-links_small a {
   text-decoration: none;
   color: #000;
   font-size: 14px;
@@ -55,17 +62,24 @@ body {
   transition: opacity 0.2s ease;
 }
 
+.nav-links a:hover,
 .nav-links a:hover {
   opacity: 0.6;
 }
 
+/* Mobile Menu (Hidden by default) */
+.nav-links_small {
+  display: none;
+}
+
+/* === Actions Area (menu + icon + button) === */
 .actions {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.icon img {
+.account img {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -87,28 +101,30 @@ body {
   background-color: #333;
 }
 
+/* === Menu Toggle Icon (Mobile only) === */
 .menu-toggle {
   display: none;
-  font-size: 24px;
-  cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+/* === Responsive Mobile View === */
+@media screen and (max-width: 1000px) {
   .nav-links {
     display: none;
   }
 
-  .nav-links.active {
+  .nav-links_small.active {
     display: flex;
     position: absolute;
     top: 70px;
-    left: 16px;
+    right: 16px;
     flex-direction: column;
     background-color: white;
-    padding: 16px;
+    padding: 12px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    gap: 12px;
+    transition: all 0.3s ease-in-out;
   }
 
   .menu-toggle {
@@ -117,31 +133,8 @@ body {
     cursor: pointer;
   }
 
-  .navbar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    height: auto;
-    gap: 0;
-  }
-
-  .actions {
-    gap: 10px;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 16px;
-  }
-    .talk-button {
-    white-space: nowrap;
-    font-size: 12px;
-    padding: 6px 16px;
-  }
-
-  .icon img {
-    width: 18px;
-    height: 18px;
+  .talk-button,
+  .account img {
+    display: none;
   }
 }
