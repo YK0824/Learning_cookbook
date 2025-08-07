@@ -12,35 +12,94 @@ body {
 
 /* === Hero Section === */
 .hero {
-  height: 716px;
-  background: url('../image/hame_head.png') center center / cover no-repeat;
-  overflow: hidden;
+  height: 600px;
+  width: 100%;
+  background: url('../image/hame_head.png') center center / contain no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* === Navbar === */
-.navbar {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 16px 32px;
-  border-radius: 40px;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
+.hero-content {
+  font-family: 'Lexend', sans-serif;
+  max-width: 635px;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  flex-direction: column;
+  width: 600px;
+}
+
+.profile_title {
+  align-self: stretch;
+  color: #FFF;
+  text-align: center;
+  text-shadow: 0 3px 2.8px rgba(0, 0, 0, 0.60);
+  font-family: Lexend;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.info .role {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.info .name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: 32px auto;
+  padding: 16px 86px;
+  display: flex;
   justify-content: space-between;
-  width: 50vw;
-  max-width: 3000px;
+  align-items: center;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 /* === Logo === */
 .logo a {
-  font-weight: 700;
-  font-size: 16px;
+  font-family: 'Parisienne', cursive;
+  font-size: 26px;
   color: black;
   text-decoration: none;
 }
@@ -80,19 +139,24 @@ body {
 }
 
 .account img {
-  width: 20px;
-  height: 20px;
+  display: flex;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  object-fit: cover;
+  padding: 6px;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
 }
 
 .talk-button {
   background-color: #000;
   color: #fff;
   border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 12px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -107,7 +171,7 @@ body {
 }
 
 /* === Responsive Mobile View === */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
   .nav-links {
     display: none;
   }
@@ -124,7 +188,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     gap: 12px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.s ease-in-out;
   }
 
   .menu-toggle {
