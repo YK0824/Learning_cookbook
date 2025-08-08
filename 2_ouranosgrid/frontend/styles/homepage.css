@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --img-logo: url('../images/logo.svg');
+  --img-logo-name: url('../images/logo_name.png');
+  --img-search: url('../images/search.png');
+  --img-person: url('../images/person.png');
+  --img-globe: url('../images/globe.png');
+}
+
+.topbar{
+  display: flex;
+  padding: 16px 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.topbar_all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.topbar_container{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.topbar_log{
+  display: flex;
+  width: 184px;
+  height: 32px;
+  padding: 0 0.007px 0 0.001px;
+  justify-content: center;
+  align-items: center;
+  gap: 11.278px;
+}
+
+.brand_logo {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: var(--img-logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.topbar_connecter {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+} 
+
+.link_content {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #000;
+  font-family: Roboto;
+  font-size: var(--Text-h7, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.support {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar_connecter_right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.link_content_icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.icon-link {
+  display: flex;
+  height: 36px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon{
+  display: flex;
+  width:36px; height:36px; display:inline-block;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:22px 22px;   /* 圖標大小 */
+}
+
+.icon.search {
+  background-image: var(--img-search);
+  width: 22px;
+  height: 22px;
+}
+.icon.globe {
+  background-image: var(--img-globe);
+  width: 22px;
+  height: 22px;
+}
+.icon.person {
+  background-image: var(--img-person);
+  width: 22px;
+  height: 22px;
+}
